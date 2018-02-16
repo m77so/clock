@@ -1,7 +1,7 @@
 const ikisakis = [
   { title: '若松', filter: null },
   { title: '鈴見台二丁目', filter: ['鈴見台二丁目'] },
-  { title: '旭町', filter: ['旭町', '如来寺'] },
+  { title: '旭町', filter: ['旭町', '如来寺前'] },
   { title: '香林坊', filter: ['香林坊', '西金沢', '金沢駅'] },
   { title: '西金沢', filter: ['西金沢'] },
   { title: '金沢駅', filter: ['金沢駅'] }
@@ -47,13 +47,7 @@ setInterval(() => {
           return {
             time: bustime.getHours() + ':' + ('00' + bustime.getMinutes()).substr(-2),
             lasttime: ~~((bustime - now) / 60000),
-            title: e.via.map(str=>{
-              if(enFlag){
-                return english[str];
-              }else{
-                return str
-              }
-            }).join('->')
+            title: e.via.map(str=>enFlag?english[str]:str).join('->')
           }
         }),
       title: enFlag?english[ikisaki.title]:ikisaki.title

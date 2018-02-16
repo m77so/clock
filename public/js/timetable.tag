@@ -12,10 +12,10 @@
   </script>
   <style>
   *{
-    font-size: 32px;
+    font-size: 2.5vh;
   }
   #clock{
-    font-size:48px;
+    font-size:100px;
   }
     fieldset{
       display: inline-block;
@@ -29,6 +29,8 @@
     li{
       list-style-type: none;
       padding:.2em;
+      
+      height: 8vh;
     }
     li:nth-child(odd){
       background: #cff;
