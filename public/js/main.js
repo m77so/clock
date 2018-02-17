@@ -39,7 +39,9 @@ setInterval(() => {
           return {
             time: bustime.getHours() + ':' + ('00' + bustime.getMinutes()).substr(-2),
             lasttime: ~~((bustime - now) / 60000),
-            title: e.via.map(str=>enFlag?english[str]:str).join('->')
+            text_ja: e.via.join('->'),
+            text_en: e.via.map(str=>english[str]).join('->')
+            
           }
         }),
       title: enFlag?english[ikisaki.title]:ikisaki.title

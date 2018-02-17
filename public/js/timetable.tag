@@ -3,7 +3,7 @@
   <fieldset each={fors}>
     <legend>{title}方面</legend>
     <ul>
-      <li each={buses}>{time} (in {lasttime}min) {title}</li>
+      <bus each={buses} data={this}></bus>
     </ul>
   </fieldset>
   <script>
@@ -32,11 +32,17 @@
       
       height: 8vh;
     }
-    li:nth-child(odd){
+    bus:nth-child(odd) li{
       background: #cff;
     }
-    li:nth-child(even){
+    bus:nth-child(even) li{
       background: #bdf;
     }
   </style>
 </timetable>
+<bus>
+  <li >{time} (in {lasttime}min) {text_ja}<br />{text_en}</li>
+  <script>
+  
+  </script>
+</bus>
