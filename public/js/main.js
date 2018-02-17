@@ -1,11 +1,3 @@
-const ikisakis = [
-  { title: '若松', filter: null },
-  { title: '鈴見台二丁目', filter: ['鈴見台二丁目'] },
-  { title: '旭町', filter: ['旭町', '如来寺前'] },
-  { title: '香林坊', filter: ['香林坊', '西金沢', '金沢駅'] },
-  { title: '西金沢', filter: ['西金沢'] },
-  { title: '金沢駅', filter: ['金沢駅'] }
-]
 setInterval(() => {
   let now = new Date()
   const holiday = JapaneseHolidays.isHoliday(now)
