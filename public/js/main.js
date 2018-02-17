@@ -18,7 +18,7 @@ setInterval(() => {
   const currentTimetable = res.filter(e => e.time >= comparedTime)
 
   const fors = []
-  let enFlag = ~~(now.getSeconds()/6)%2 ? true : false
+  let enFlag = ~~(now.getSeconds() / 6) % 2 ? true : false
   ikisakis.forEach(ikisaki => {
     fors.push({
       buses: currentTimetable
@@ -40,11 +40,10 @@ setInterval(() => {
             time: bustime.getHours() + ':' + ('00' + bustime.getMinutes()).substr(-2),
             lasttime: ~~((bustime - now) / 60000),
             text_ja: e.via.join('->'),
-            text_en: e.via.map(str=>english[str]).join('->')
-            
+            text_en: e.via.map(str => english[str]).join('->')
           }
         }),
-      title: enFlag?english[ikisaki.title]:ikisaki.title
+      title: enFlag ? english[ikisaki.title] : ikisaki.title
     })
   })
   riot.mount('timetable', {
