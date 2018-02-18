@@ -4,6 +4,9 @@
     <ul>
       <bus each={buses} data={this}></bus>
     </ul>
+    <div show={buses.length===0}>
+      本日の運行は終了しました<br/>The service of today was finished.
+    </div>
   </fieldset>
 
   <script>
