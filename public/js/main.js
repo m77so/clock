@@ -25,6 +25,9 @@ const getFor = () => {
         .filter(e => {
           if (ikisaki.filter === null) return true
           for (let filter of ikisaki.filter) {
+            if(filter.charAt(0)==='~' && e.via.includes(filter.substr(1))){
+              return false
+            }
             if (e.via.includes(filter)) {
               return true
             }
@@ -33,7 +36,7 @@ const getFor = () => {
         })
         .slice(0, 2)
         .map(e => {
-          const bustime = new Date()
+          const bustime = new Date(+now)
           bustime.setHours(~~(e.time / 60))
           bustime.setMinutes(e.time % 60)
           return {

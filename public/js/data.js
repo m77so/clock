@@ -219,7 +219,7 @@ const english={ '金沢駅': 'Kanazawa Sta.',
     { title: '若松', filter: null },
     { title: '鈴見台二丁目', filter: ['鈴見台二丁目'] },
     { title: '旭町', filter: ['旭町', '如来寺前'] },
-    { title: '香林坊', filter: ['香林坊', '西金沢', '金沢駅'] },
+    { title: '香林坊', filter: ['~富本町','香林坊', '西金沢', '金沢駅'] },
     { title: '西金沢', filter: ['西金沢'] },
     { title: '金沢駅', filter: ['金沢駅'] }
   ]
