@@ -1,6 +1,6 @@
 <timetable>
   <fieldset each={fors}>
-    <legend>{title}方面</legend>
+    <legend>{title_ja}方面 For {title_en}</legend>
     <ul>
       <bus each={buses} data={this}></bus>
     </ul>
@@ -66,6 +66,7 @@
     }
   </style>
 </timetable>
+
 <bus>
   <li style="background:rgb({red},{green},50)">{time} (in {lasttime}min) {text_ja}<br />{text_en}</li>
   <script>

@@ -46,7 +46,8 @@ const getFor = () => {
             text_en: e.via.map(str => english[str]).join('->')
           }
         }),
-      title: enFlag ? english[ikisaki.title] : ikisaki.title
+      title_en: english[ikisaki.title] ,
+      title_ja: ikisaki.title
     })
   })
   return fors

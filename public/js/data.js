@@ -201,20 +201,20 @@ const timetable = {
   ]
 }
 const english={ '金沢駅': 'Kanazawa Sta.',
-  '西金沢': 'West Kanazawa Sta.',
-  '東金沢': 'East Kanazawa Sta.',
+  '西金沢': 'W Kanazawa',
+  '東金沢': 'E Kanazawa',
   '旭町': 'Asahi-machi',
   '若松': 'Wakamatsu',
-  '野々市車庫': 'Nonoichi-Shako',
-  '如来寺前': 'Nyorai-ji',
+  '野々市車庫': 'NonoichiShako',
+  '如来寺前': 'Nyoraiji',
   '鶴寿園': 'Kakujuen',
   '鈴見町': 'Suzumi-machi',
   '田井町': 'Tayi-machi',
-  '香林坊': 'Korinbo',
-  '富本町': 'Tomimoto-cho',
+  '香林坊': 'Kōrinbō',
+  '富本町': 'Tomimoto-chō',
   '四十万': 'Shijima',
   '鈴見台二丁目' : 'Suzumidai(2)',
-  '星稜高校': 'Seiryo HighSchool' }
+  '星稜高校': 'Seiryō HS' }
   const ikisakis = [
     { title: '若松', filter: null },
     { title: '鈴見台二丁目', filter: ['鈴見台二丁目'] },
