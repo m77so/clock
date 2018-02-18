@@ -22,13 +22,13 @@
 
   <style>
     #clock_date{
-      font-size:5vh
+      font-size:7vh
     }
     #clock_hm{
-      font-size:8vh
+      font-size:11vh
     }
     #clock_s{
-      font-size:3vh
+      font-size:5vh
     }
   </style>
 </clock>
