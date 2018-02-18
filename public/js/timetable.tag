@@ -1,5 +1,4 @@
 <timetable>
-<div id='clock'>{clock}</div>
   <fieldset each={fors}>
     <legend>{title}方面</legend>
     <ul>
@@ -8,9 +7,14 @@
   </fieldset>
 
   <script>
-    this.fors = opts.fors
-    this.clock = opts.clock
+    this.fors = getFor()
 
+    setInterval(()=>{
+      this.update({
+        fors: getFor()
+      })},
+      1000
+    )
   </script>
 
 <!-- デバッグ用 -->
@@ -64,7 +68,6 @@
 </timetable>
 <bus>
   <li style="background:rgb({red},{green},50)">{time} (in {lasttime}min) {text_ja}<br />{text_en}</li>
-  
   <script>
     const lasttime = this.lasttime
     this.red = Math.max(255-lasttime*7,100)

@@ -1,4 +1,4 @@
-setInterval(() => {
+const getFor = () => {
   let now = new Date()
   const holiday = JapaneseHolidays.isHoliday(now)
   const vacation = now < new Date(2018, 4, 17, 0, 0, 0) && now > new Date(2018, 2, 13, 0, 0, 0)
@@ -46,8 +46,6 @@ setInterval(() => {
       title: enFlag ? english[ikisaki.title] : ikisaki.title
     })
   })
-  riot.mount('timetable', {
-    fors: fors,
-    clock: now.getHours() + ':' + ('00' + now.getMinutes()).substr(-2) + ':' + ('00' + now.getSeconds()).substr(-2)
-  })
-}, 100)
+  return fors
+}
+
