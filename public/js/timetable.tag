@@ -16,7 +16,7 @@
       this.update({
         fors: getFor()
       })},
-      1000
+      10000
     )
   </script>
 
@@ -71,10 +71,9 @@
 </timetable>
 
 <bus>
-  <li style="background:rgb({red},{green},50)">{time} (in {lasttime}min) {text_ja}<br />{text_en}</li>
+  <li style="background-color:hsl({h},100%,70%)">{time} (in {lasttime}min) {text_ja}<br />{text_en}</li>
   <script>
     const lasttime = this.lasttime
-    this.red = Math.max(255-lasttime*7,100)
-    this.green= Math.min(120+lasttime*5,255)
+    this.h = Math.min(lasttime*8-32,240)
   </script>
 </bus>
